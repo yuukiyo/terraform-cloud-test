@@ -1,3 +1,7 @@
+provider "aws" {
+  region = "ap-northeast-1"
+}
+
 variable "aws_access_key" {}
 variable "aws_secret_key" {}
 
