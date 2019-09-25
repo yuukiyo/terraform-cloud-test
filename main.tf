@@ -1,9 +1,11 @@
-provider "aws" {
-  region = "ap-northeast-1"
-}
-
 variable "aws_access_key" {}
 variable "aws_secret_key" {}
+
+provider "aws" {
+  aws_access_key = "var.aws_access_key"
+  aws_secret_key = "var.aws_secret_key"
+  region = "ap-northeast-1"
+}
 
 resource "aws_vpc" "terraform-cloud-test-vpc" {
   cidr_block           = "11.0.0.0/16"
